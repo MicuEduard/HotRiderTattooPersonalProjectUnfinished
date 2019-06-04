@@ -1,0 +1,535 @@
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'Inconsolata', monospace;
+font-family: 'Yellowtail', cursive;
+font-family: 'Permanent Marker', cursive;
+*/
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* LOADER START */
+
+.loader {
+	width: 100%;
+	height: 100vh;
+	background-color: #000;
+	position: relative;
+}
+
+.first {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #fff;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	animation: rotate 3s linear infinite;
+}
+
+.second {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border: 2px solid #fff;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 300ms;
+	animation: move-second 2s linear infinite;
+}
+
+.third {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border: 2px solid #fff;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 300ms;
+	animation: move-third 2s linear infinite;
+}
+
+@keyframes move-second {
+	25% {
+		left: 48%;
+		top: 50%;
+	}
+	50% {
+		left: 48%;
+		top: 47%;
+	}
+	75% {
+		left: 50%;
+		top: 47%;
+	}
+	100% {
+		left: 50%;
+		top: 50%;
+	}
+}
+
+@keyframes move-third {
+	25% {
+		left: 52%;
+		top: 50%;
+	}
+	50% {
+		left: 52%;
+		top: 53%;
+	}
+	75% {
+		left: 50%;
+		top: 53%;
+	}
+	100% {
+		left: 50%;
+		top: 50%;
+	}
+}
+
+@keyframes rotate {
+	100% {
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+}
+
+/* LOADER END */
+
+/* HEADER START */
+
+.wrapper {
+	width: 100%;
+	height: 100vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	background-image: url('artist-2238780.jpg');
+	background-size: cover;
+}
+
+.wrapper .main {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	height: 100vh;
+}
+
+.section {
+	width: 20%;
+	color: #fff;
+	font-family: 'Anton', sans-serif;
+	font-size: 30px;
+	position: relative;
+	transform: skewX(-10deg);
+	text-align: center;
+	cursor: pointer;
+	transition: all 300ms;
+}
+
+.home {
+	height: 100%;
+	background-image: url('HOME PH.jpg');
+	background-size: cover;
+}
+
+.about {
+	height: 100%;
+	background-image: url('ABOUT PH.jpg');
+	background-size: cover;
+}
+
+.tattoos {
+	height: 100%;
+	background-image: url('TATTOOS.jpg');
+	background-size: cover;
+}
+
+.artists {
+	height: 100%;
+	background-image: url('ARTISTS PH.jpg');
+	background-size: cover;
+}
+
+.contact {
+	height: 100%;
+	background-image: url('CONTACT PH.jpg');
+	background-size: cover;
+}
+
+.section h1 {
+	transform: rotate(-90deg);
+	top: 50%;
+	position: absolute;
+	opacity: .7;
+	letter-spacing: 7px;
+}
+
+.section:hover {
+	transform: skewX(-10deg) scale(1.1);
+}
+
+/* HEADER END */
+
+/* HOME SECTION START */
+
+.home-section {
+	z-index: 10;
+	color: #fff;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.home-section h1 {
+	font-family: 'Permanent Marker', cursive;
+	position: absolute;
+	font-size: 80px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: rgba(255, 255, 255, .7);
+	letter-spacing: 7px;
+	width: 850px;
+	z-index: 2;
+}
+
+.home-section h3 {
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	transform: translate(-50%, -50%);
+	color: rgba(255, 255, 255, .7);
+	letter-spacing: 7px;
+	font-family: 'Inconsolata', monospace;
+	z-index: 2;
+}
+
+.home-section .button {
+	font-family: 'Inconsolata', monospace;
+	letter-spacing: 3px;
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	transform: translate(-50%, -50%);
+	color: rgba(255, 255, 255, .7);
+	width: 150px;
+	height: 40px;
+	border: 1px solid #fff;
+	text-align: center;
+	cursor: pointer;
+	transition: all 300ms;
+	z-index: 2;
+}
+
+.home-section .button p {
+	line-height: 40px;
+	z-index: 2;
+}
+
+.home-section .button:hover {
+	background-color: rgba(255, 255, 255, .7);
+	color: rgba(0, 0, 0, .7);
+}
+
+.home-section .box {
+	width: 900px;
+	height: 600px;
+	border: 1px solid #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+}
+
+.menu {
+	position: absolute;
+	left: 80%;
+	top: 5%;
+	color: #fff;
+	opacity: .7;
+	font-size: 50px;
+	cursor: pointer;
+	z-index: 15;
+}
+
+/* HOME SECTION END */
+
+/* ABOUT SECTION START */
+
+.about-section {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	text-align: center;
+}
+
+.about-section h1 {
+	font-family: 'Permanent Marker', cursive;
+	position: absolute;
+	font-size: 80px;
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -50%);
+	color: rgba(255, 255, 255, .7);
+	letter-spacing: 7px;
+	width: 850px;
+	z-index: 2;
+}
+
+.about-section p {
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	transform: translate(-50%, -50%);
+	color: rgba(255, 255, 255, .7);
+	letter-spacing: 7px;
+	font-family: 'Inconsolata', monospace;
+	z-index: 2;
+	width: 70%;
+}
+
+.about-section .separator {
+	width: 60%;
+	height: 1px;
+	background-color: #fff;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+/* ABOUT SECTION END */
+
+/* CONTACT SECTION START */
+
+.contact-section {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	text-align: center;
+}
+
+.contact-section h1 {
+	font-family: 'Permanent Marker', cursive;
+	position: absolute;
+	font-size: 80px;
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -50%);
+	color: rgba(255, 255, 255, .7);
+	letter-spacing: 7px;
+	width: 850px;
+	z-index: 2;
+}
+
+.contact-section form {
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	transform: translate(-50%, -50%);
+}
+
+.contact-section input {
+	background-color: transparent;
+	width: 70%;
+	height: 34px;
+	border: 1px solid #fff;
+	color: #fff;
+	font-family: 'Inconsolata', monospace;
+	padding-left: 20px;
+}
+
+.contact-section textarea {
+	background-color: transparent;
+	width: 70%;
+	border: 1px solid #fff;
+	color: #fff;
+	font-family: 'Inconsolata', monospace;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+.contact-section h3 {
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	color: rgba(255, 255, 255, .7);
+	letter-spacing: 7px;
+	font-family: 'Inconsolata', monospace;
+	z-index: 2;
+	width: 700px;
+}
+
+.contact-section .social {
+	top: 90%;
+	position: absolute;
+	opacity: .7;
+	top: 95%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.contact-section .social img {
+	width: 68px;
+	height: 68px;
+	margin: 0px 20px;
+	cursor: pointer;
+	transition: all 300ms;
+}
+
+.contact-section .social img:hover {
+	transform: scale(1.2);
+}
+
+/* CONTACT SECTION END */
+
+/* TATTOOS SECTION START */
+
+.tattoos-section {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	text-align: center;
+}
+
+.tattoos-section h1 {
+	font-family: 'Permanent Marker', cursive;
+	position: absolute;
+	font-size: 80px;
+	left: 5%;
+	top: 5%;
+	color: rgba(255, 255, 255, .7);
+	letter-spacing: 7px;
+	width: 850px;
+	z-index: 2;
+}
+
+.main-tattoos {
+	width: 100%;
+	position: absolute;
+	height: 100vh;
+	top: 0px;
+	left: 0px;
+}
+
+.row {
+	width: 100%;
+	position: relative;
+	height: 100vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	top: 0px;
+	left: 0px;
+	align-items: center;
+}
+
+.row .col {
+	width: 19%;
+	height: 99vh;
+	position: relative;
+}
+
+.row .col img {
+	width: 100%;
+	height: 100vh;
+	border: 1px solid #fff;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	cursor: pointer;
+	transition: all 300ms;
+}
+
+.row .col img:hover {
+	transform: scale(1.1);
+}
+
+.row .col .small {
+	width: 100%;
+	height: 35vh;
+	position: absolute;
+}
+
+/* TATTOOS SECTION END */
+
+/* ARTISTS SECTION START */
+
+.artists-section {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.artists-section h1 {
+	font-family: 'Permanent Marker', cursive;
+	position: absolute;
+	font-size: 80px;
+	left: 5%;
+	top: 3%;
+	color: rgba(255, 255, 255, .7);
+	letter-spacing: 7px;
+	width: 850px;
+	z-index: 2;
+}
+
+.artist {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	border: 1px solid #fff;
+	padding: 50px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.artist img {
+	width: 30%;
+	position: relative;
+	height: 500px;
+	border: 1px solid #fff;
+}
+
+.artist .separator-h {
+	position: relative;
+	width: 2px;
+	height: 500px;
+	background-color: #fff;
+}
+
+.artist p {
+	width: 50%;
+	position: relative;
+	font-family: 'Inconsolata', monospace;
+	letter-spacing: 3px;
+	color: #fff;
+}
+
+/* ARTISTS SECTION END */
